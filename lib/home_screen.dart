@@ -12,7 +12,7 @@ class HomeScreen extends StatelessWidget {
         title: const Text('Learning Widgets'),
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
