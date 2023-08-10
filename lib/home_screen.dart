@@ -11,6 +11,11 @@ class HomeScreen extends StatelessWidget {
         centerTitle: true,
         title: const Text('Learning Widgets'),
       ),
+      body: Column(
+        children: [
+          
+        ],
+      ),
     );
   }
 }
