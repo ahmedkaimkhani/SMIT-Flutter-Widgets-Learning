@@ -12,9 +12,10 @@ class HomeScreen extends StatelessWidget {
         title: const Text('Learning Widgets'),
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
                 height: 100,
@@ -34,6 +35,7 @@ class HomeScreen extends StatelessWidget {
                 color: Colors.deepOrange,
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
                 height: 100,
