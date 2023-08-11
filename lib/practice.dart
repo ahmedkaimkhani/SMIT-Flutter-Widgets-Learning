@@ -9,6 +9,15 @@ class PracticeWidgets extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Practice Widgets'),
       ),
+      body: Column(
+        children: [
+          Container(
+            height: 100,
+            width: 100,
+            color: Colors.deepPurple,
+          )
+        ],
+      ),
     );
   }
 }
