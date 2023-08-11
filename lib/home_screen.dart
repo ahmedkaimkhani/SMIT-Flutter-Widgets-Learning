@@ -44,7 +44,7 @@ class HomeScreen extends StatelessWidget {
               Container(
                 height: 100,
                 width: 100,
-                color: Colors.deepOrange,
+                
               ),
             ],
           ),
