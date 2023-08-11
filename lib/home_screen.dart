@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -30,12 +29,12 @@ class HomeScreen extends StatelessWidget {
             ],
           ),
           Container(
-                height: 100,
-                width: 100,
-                color: Colors.deepOrange,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            height: 100,
+            width: 100,
+            color: Colors.deepOrange,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
                 height: 100,
@@ -45,7 +44,7 @@ class HomeScreen extends StatelessWidget {
               Container(
                 height: 100,
                 width: 100,
-                color: Colors.deepOrange,
+                
               ),
             ],
           ),
