@@ -10,12 +10,16 @@ class PracticeWidgets extends StatelessWidget {
         title: const Text('Practice Widgets'),
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Container(
-            height: 100,
-            width: 100,
-            color: Colors.deepPurple,
-          )
+          Center(
+            child: Container(
+              height: 100,
+              width: 100,
+              color: Colors.deepPurple,
+              child: Text('Box', selectionColor: Colors.white,),
+            ),
+          ),
         ],
       ),
     );
