@@ -17,7 +17,7 @@ class PracticeWidgets extends StatelessWidget {
               height: 100,
               width: 100,
               color: Colors.deepPurple,
-              child: Text('Box', selectionColor: Colors.white,),
+              child: Text('Box'),
             ),
           ),
         ],
