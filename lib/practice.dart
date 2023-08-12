@@ -15,9 +15,12 @@ class PracticeWidgets extends StatelessWidget {
           Row(
             children: [
               Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(100)
+                ),
                 height: 100,
                 width: 100,
-                color: Colors.white,
                 child: const Center(
                     child: Text(
                   'Design',
