@@ -10,14 +10,13 @@ class PracticeWidgets extends StatelessWidget {
         title: const Text('Practice Widgets'),
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Center(
             child: Container(
               height: 100,
               width: 100,
               color: Colors.deepPurple,
-              child: Text('Box'),
+              child: Center(child: Text('Box')),
             ),
           ),
         ],
