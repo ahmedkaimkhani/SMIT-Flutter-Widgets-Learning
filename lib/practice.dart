@@ -6,30 +6,33 @@ class PracticeWidgets extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: Colors.grey[100],
       appBar: AppBar(
         title: const Text('Practice Widgets'),
       ),
       body: Column(
+        // mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Row(
+            // mainAxisAlignment: MainAxisAlignment.center,
+            // crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(100),
                   boxShadow: [
-                    const BoxShadow(
-                      blurRadius: 1,
-                      spreadRadius: 5,
-                      offset: Offset(4, 4),
-                      color: Colors.white
-                    ),
                     BoxShadow(
-                      blurRadius: 1,
-                      spreadRadius: 5,
-                      offset: const Offset(-4, -4),
-                      color: Colors.grey.shade600
+                      blurRadius: 5,
+                      spreadRadius: 1,
+                      offset: const Offset(4, 4),
+                      color: Colors.grey.shade400
+                    ),
+                    const BoxShadow(
+                      blurRadius: 5,
+                      spreadRadius: 1,
+                      offset: Offset(-4, -4),
+                      color: Colors.white
                     ),
                   ]
                 ),
