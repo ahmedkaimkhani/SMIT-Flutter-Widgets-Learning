@@ -74,10 +74,14 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
                   child: TextField(
                     cursorColor: Colors.deepPurple,
                     decoration: InputDecoration(
+                        hintText: 'Enter content',
+                        hintStyle:
+                            const TextStyle(fontSize: 14, color: Colors.grey),
+                        // fillColor: Colors.grey,
                         border: InputBorder.none,
                         suffixIcon: IconButton(
                             onPressed: () {},
-                            icon: Icon(
+                            icon: const Icon(
                               Icons.add,
                               color: Colors.deepPurple,
                             ))),
