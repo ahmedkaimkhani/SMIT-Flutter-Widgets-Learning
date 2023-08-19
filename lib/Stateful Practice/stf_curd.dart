@@ -16,6 +16,29 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
         title: const Text('Curd Operations'),
         centerTitle: true,
       ),
+      body: Column(
+        mainAxisSize: MainAxisSize.max,
+        children: [
+          Stack(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 30),
+                child: Positioned(
+                  bottom: 1,
+                  child: Container(
+                    width: double.infinity,
+                    height: 50,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.white,
+                        border: Border.all(color: Colors.black)),
+                  ),
+                ),
+              )
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
