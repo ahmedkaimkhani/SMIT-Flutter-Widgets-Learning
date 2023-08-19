@@ -14,7 +14,15 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
       appBar: AppBar(
         backgroundColor: Colors.deepPurple[400],
         title: const TextField(),
-        actions: const [Text('Add')],
+        actions: const [
+          Padding(
+            padding: EdgeInsets.only(top: 10, right: 10),
+            child: Text(
+              'Add',
+              style: TextStyle(fontSize: 25),
+            ),
+          )
+        ],
       ),
     );
   }
