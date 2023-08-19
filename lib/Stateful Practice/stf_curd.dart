@@ -10,6 +10,12 @@ class StfCurdPractice extends StatefulWidget {
 class _StfCurdPracticeState extends State<StfCurdPractice> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.deepPurple[400],
+        title: const TextField(),
+        actions: const [Text('Add')],
+      ),
+    );
   }
 }
