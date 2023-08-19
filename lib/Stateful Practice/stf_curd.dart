@@ -13,16 +13,8 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.deepPurple[400],
-        title: const TextField(),
-        actions: const [
-          Padding(
-            padding: EdgeInsets.only(top: 10, right: 10),
-            child: Text(
-              'Add',
-              style: TextStyle(fontSize: 25),
-            ),
-          )
-        ],
+        title: const Text('Curd Operations'),
+        centerTitle: true,
       ),
     );
   }
