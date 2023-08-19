@@ -17,12 +17,22 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
         centerTitle: true,
       ),
       body: Container(
-        width: double.infinity,
-        height: 50,
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10),
-            color: Colors.white,
-            border: Border.all(color: Colors.black)),
+        color: Colors.yellow,
+        child: Column(
+          children: [
+            Positioned(
+              bottom: 0,
+              child: Container(
+                width: double.infinity,
+                height: 50,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.white,
+                    border: Border.all(color: Colors.black)),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
