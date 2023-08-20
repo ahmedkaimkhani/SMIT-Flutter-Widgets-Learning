@@ -21,7 +21,7 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
 
   @override
   Widget build(BuildContext context) {
-    friensList.addAll(['Hassam, lala, Khan']);
+    friensList.add('Fasi');
 
     return Scaffold(
       backgroundColor: Colors.grey[300],
