@@ -24,6 +24,12 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
     });
   }
 
+  updateFriend(index) {
+    setState(() {
+      friensList[index] = textEditController.text.trim();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -147,7 +153,9 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
                           ),
                           const Spacer(),
                           IconButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                updateFriend(index);
+                              },
                               icon: const Icon(
                                 Icons.edit,
                                 color: Colors.deepPurple,
