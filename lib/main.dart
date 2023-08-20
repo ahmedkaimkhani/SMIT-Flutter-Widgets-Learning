@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_class_1/Counter/counter_increment.dart';
 import 'package:flutter_class_1/Stateful%20Practice/stf_curd.dart';
 import 'package:flutter_class_1/home_screen.dart';
 import 'package:flutter_class_1/practice.dart';
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: StfCurdPractice(),
+      home: CounterIncrement(),
     );
   }
 }
