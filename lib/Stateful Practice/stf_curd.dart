@@ -88,13 +88,6 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
               ),
             ),
           ),
-          ListView.builder(
-            shrinkWrap: true,
-            physics: const NeverScrollableScrollPhysics(),
-            itemBuilder: (context, index) {
-              return Text('data');
-            },
-          ),
         ],
       ),
     );
