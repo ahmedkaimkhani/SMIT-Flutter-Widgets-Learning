@@ -140,8 +140,19 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
                                 color: Colors.deepPurple),
                           ),
                           const Spacer(),
-                          const Icon(Icons.restore_from_trash_sharp,
-                              color: Colors.deepPurple)
+                          IconButton(
+                              onPressed: () {},
+                              icon: const Icon(
+                                Icons.edit,
+                                color: Colors.deepPurple,
+                              )),
+                          IconButton(
+                            onPressed: () {},
+                            icon: const Icon(
+                              Icons.delete_outline,
+                              color: Colors.deepPurple,
+                            ),
+                          ),
                         ],
                       ),
                     ),
