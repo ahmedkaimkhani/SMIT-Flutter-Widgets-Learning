@@ -88,9 +88,6 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
                   ),
                 ),
               ),
-              // ListView.builder(itemBuilder: (context, index) {
-              //   // return
-              // },)
             ],
           ),
         ));
