@@ -55,7 +55,7 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
                 margin: const EdgeInsets.only(top: 25, left: 15, right: 15),
                 decoration: BoxDecoration(
                     color: Colors.grey[300],
-                    borderRadius: BorderRadius.circular(8),
+                    borderRadius: BorderRadius.circular(5),
                     // border: Border.all(width: 0.5, color: Colors.grey),
                     boxShadow: [
                       BoxShadow(
@@ -88,6 +88,9 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
                   ),
                 ),
               ),
+              // ListView.builder(itemBuilder: (context, index) {
+              //   // return
+              // },)
             ],
           ),
         ));
