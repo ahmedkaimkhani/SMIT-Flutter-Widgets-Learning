@@ -10,11 +10,12 @@ class CounterView extends StatefulWidget {
 class _CounterViewState extends State<CounterView> {
   // counter value
   int counter = 0;
+  bool isTrue = false;
 
   // counter increment method
   counterValuePlus() {
     setState(() {
-      counter++;
+      counter == 0 ? counter++ : counter--;
     });
   }
 
