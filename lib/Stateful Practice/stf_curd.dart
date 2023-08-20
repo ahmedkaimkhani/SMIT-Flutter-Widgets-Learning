@@ -8,21 +8,24 @@ class StfCurdPractice extends StatefulWidget {
 }
 
 class _StfCurdPracticeState extends State<StfCurdPractice> {
-  List friensList = [
-    'Ahmed',
-    'Usman',
-    'Bazil',
-    'Asim',
-    'Naveed',
-    'Bilal',
-    'Hamza',
-    'Babu'
-  ];
+  List friensList = [];
+  TextEditingController textEditController = TextEditingController();
+
+  addFriend() {
+    setState(() {
+      friensList.add(textEditController.text);
+      textEditController.clear();
+    });
+  }
+
+  deleteFriend(index) {
+    setState(() {
+      friensList.removeAt(index);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
-    friensList.add('Fasi');
-
     return Scaffold(
       backgroundColor: Colors.grey[300],
       body: SingleChildScrollView(
@@ -87,6 +90,7 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: TextField(
+                    controller: textEditController,
                     cursorColor: Colors.deepPurple,
                     decoration: InputDecoration(
                         hintText: 'Enter content',
@@ -97,7 +101,9 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
                         // fillColor: Colors.grey,
                         border: InputBorder.none,
                         suffixIcon: IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              addFriend();
+                            },
                             icon: const Icon(
                               Icons.add,
                               color: Colors.deepPurple,
@@ -135,7 +141,7 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
                           Text(
                             friensList[index].toString(),
                             style: const TextStyle(
-                                fontSize: 20,
+                                fontSize: 15,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.deepPurple),
                           ),
@@ -147,7 +153,9 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
                                 color: Colors.deepPurple,
                               )),
                           IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              deleteFriend(index);
+                            },
                             icon: const Icon(
                               Icons.delete_outline,
                               color: Colors.deepPurple,
