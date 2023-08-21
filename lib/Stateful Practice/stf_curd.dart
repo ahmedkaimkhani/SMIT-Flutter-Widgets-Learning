@@ -117,7 +117,7 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
                           onPressed: () {
                             setState(() {
                               Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => TrashScreen(),
+                                builder: (context) => const TrashScreen(),
                               ));
                             });
                           },
