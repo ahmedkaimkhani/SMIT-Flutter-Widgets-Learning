@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_class_1/Stateful%20Practice/trash.dart';
 
 class StfCurdPractice extends StatefulWidget {
   const StfCurdPractice({Key? key}) : super(key: key);
@@ -113,7 +114,9 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
                       ),
                       const Spacer(),
                       IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            const TrashScreen();
+                          },
                           icon: const Icon(
                             Icons.restore_from_trash_sharp,
                             color: Colors.deepPurple,
