@@ -26,10 +26,6 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
   }
 
   updateFriend(index) {
-    setState(() {});
-  }
-
-  alerDialogEdit(index) {
     showDialog(
       context: context,
       builder: (context) {
@@ -52,11 +48,19 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
             ),
           ),
           actions: [
-            ElevatedButton(onPressed: () {}, child: const Text('Cancel')),
+            ElevatedButton(
+                onPressed: () {
+                  setState(() {
+                    Navigator.pop(context);
+                  });
+                },
+                child: const Text('Cancel')),
             ElevatedButton(
                 onPressed: () {
                   setState(() {
                     friensList[index] = updateController.text;
+                    updateController.clear();
+                    Navigator.pop(context);
                   });
                 },
                 child: const Text('Done'))
@@ -190,7 +194,7 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
                           const Spacer(),
                           IconButton(
                               onPressed: () {
-                                alerDialogEdit(index);
+                                updateFriend(index);
                               },
                               icon: const Icon(
                                 Icons.edit,
