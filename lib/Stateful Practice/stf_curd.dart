@@ -30,6 +30,7 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
       context: context,
       builder: (context) {
         return AlertDialog(
+          backgroundColor: Colors.grey[300],
           title: const Text(
             'Do you want to edit ?',
             style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
