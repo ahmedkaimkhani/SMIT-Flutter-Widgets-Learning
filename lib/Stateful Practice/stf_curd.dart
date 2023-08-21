@@ -30,40 +30,40 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
   }
 
   alerDialogEdit(index) {
-    setState(() {
-      showDialog(
-        context: context,
-        builder: (context) {
-          return AlertDialog(
-            title: const Text(
-              'Do you want to edit ?',
-              style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: const Text(
+            'Do you want to edit ?',
+            style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+          ),
+          content: TextField(
+            controller: updateController,
+            cursorColor: Colors.deepPurple,
+            decoration: const InputDecoration(
+              hintText: 'Edit Text',
+              hintStyle: TextStyle(
+                  fontSize: 14,
+                  color: Colors.grey,
+                  fontWeight: FontWeight.w800),
+              // fillColor: Colors.grey,
+              border: InputBorder.none,
             ),
-            content: TextField(
-              controller: updateController,
-              cursorColor: Colors.deepPurple,
-              decoration: const InputDecoration(
-                hintText: 'Edit Text',
-                hintStyle: TextStyle(
-                    fontSize: 14,
-                    color: Colors.grey,
-                    fontWeight: FontWeight.w800),
-                // fillColor: Colors.grey,
-                border: InputBorder.none,
-              ),
-            ),
-            actions: [
-              ElevatedButton(onPressed: () {}, child: const Text('Cancel')),
-              ElevatedButton(
-                  onPressed: () {
+          ),
+          actions: [
+            ElevatedButton(onPressed: () {}, child: const Text('Cancel')),
+            ElevatedButton(
+                onPressed: () {
+                  setState(() {
                     friensList[index] = updateController.text;
-                  },
-                  child: const Text('Done'))
-            ],
-          );
-        },
-      );
-    });
+                  });
+                },
+                child: const Text('Done'))
+          ],
+        );
+      },
+    );
   }
 
   @override
