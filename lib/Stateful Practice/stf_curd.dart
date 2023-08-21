@@ -9,6 +9,7 @@ class StfCurdPractice extends StatefulWidget {
 
 class _StfCurdPracticeState extends State<StfCurdPractice> {
   List friensList = [];
+  List TrashLish = [];
   TextEditingController textEditController = TextEditingController();
   TextEditingController updateController = TextEditingController();
 
@@ -102,17 +103,21 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
                 child: Padding(
                   padding: const EdgeInsets.all(12),
                   child: Row(
-                    children: const [
-                      Text(
+                    children: [
+                      const Text(
                         'Curd Operations',
                         style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
                             color: Colors.deepPurple),
                       ),
-                      Spacer(),
-                      Icon(Icons.restore_from_trash_sharp,
-                          color: Colors.deepPurple)
+                      const Spacer(),
+                      IconButton(
+                          onPressed: () {},
+                          icon: const Icon(
+                            Icons.restore_from_trash_sharp,
+                            color: Colors.deepPurple,
+                          ))
                     ],
                   ),
                 ),
