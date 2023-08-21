@@ -53,13 +53,7 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
             ),
             actions: [
               TextButton(onPressed: () {}, child: const Text('Cancel')),
-              TextButton(
-                  onPressed: () {
-                    setState(() {
-                      friensList.add(textEditController.text);
-                    });
-                  },
-                  child: const Text('Done'))
+              TextButton(onPressed: () {}, child: const Text('Done'))
             ],
           );
         },
