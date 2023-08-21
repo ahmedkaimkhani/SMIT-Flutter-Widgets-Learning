@@ -10,6 +10,7 @@ class StfCurdPractice extends StatefulWidget {
 class _StfCurdPracticeState extends State<StfCurdPractice> {
   List friensList = [];
   TextEditingController textEditController = TextEditingController();
+  TextEditingController updateController = TextEditingController();
 
   addFriend() {
     setState(() {
@@ -28,7 +29,7 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
     setState(() {});
   }
 
-  alerDialogEdit() {
+  alerDialogEdit(index) {
     setState(() {
       showDialog(
         context: context,
@@ -39,7 +40,7 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
               style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
             ),
             content: TextField(
-              controller: textEditController,
+              controller: updateController,
               cursorColor: Colors.deepPurple,
               decoration: const InputDecoration(
                 hintText: 'Edit Text',
@@ -52,8 +53,12 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
               ),
             ),
             actions: [
-              TextButton(onPressed: () {}, child: const Text('Cancel')),
-              TextButton(onPressed: () {}, child: const Text('Done'))
+              ElevatedButton(onPressed: () {}, child: const Text('Cancel')),
+              ElevatedButton(
+                  onPressed: () {
+                    friensList[index] = updateController.text;
+                  },
+                  child: const Text('Done'))
             ],
           );
         },
@@ -185,7 +190,7 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
                           const Spacer(),
                           IconButton(
                               onPressed: () {
-                                alerDialogEdit();
+                                alerDialogEdit(index);
                               },
                               icon: const Icon(
                                 Icons.edit,
