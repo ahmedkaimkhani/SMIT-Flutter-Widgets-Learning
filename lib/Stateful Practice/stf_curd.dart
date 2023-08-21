@@ -187,7 +187,7 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
                           Text(
                             friensList[index].toString(),
                             style: const TextStyle(
-                                fontSize: 15,
+                                fontSize: 18,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.deepPurple),
                           ),
