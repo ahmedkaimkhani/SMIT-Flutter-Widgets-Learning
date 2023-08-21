@@ -115,7 +115,9 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
                       const Spacer(),
                       IconButton(
                           onPressed: () {
-                            const TrashScreen();
+                            setState(() {
+                              const TrashScreen();
+                            });
                           },
                           icon: const Icon(
                             Icons.restore_from_trash_sharp,
