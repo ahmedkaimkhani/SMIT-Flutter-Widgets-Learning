@@ -10,7 +10,8 @@ class StfCurdPractice extends StatefulWidget {
 
 class _StfCurdPracticeState extends State<StfCurdPractice> {
   List friensList = [];
-  List TrashLish = [];
+  List trashList = [];
+
   TextEditingController textEditController = TextEditingController();
   TextEditingController updateController = TextEditingController();
 
@@ -23,6 +24,7 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
 
   deleteFriend(index) {
     setState(() {
+      trashList.add(friensList[index]);
       friensList.removeAt(index);
     });
   }
