@@ -10,16 +10,12 @@ class CounterView extends StatefulWidget {
 class _CounterViewState extends State<CounterView> {
   // counter value
   int counter = 0;
-  bool isTrue = true;
+  bool isZero = true;
 
   // chage value
   changeValue() {
     setState(() {
-      if (counter == 0) {
-        counter++;
-      } else {
-        counter--;
-      }
+      isZero = !isZero;
     });
   }
 
@@ -41,7 +37,7 @@ class _CounterViewState extends State<CounterView> {
           mainAxisSize: MainAxisSize.max,
           children: [
             Text(
-              'Value: $counter',
+              'Value: ${isZero ? 0 : 1}',
               style: const TextStyle(
                   fontSize: 40,
                   color: Colors.deepPurple,
@@ -88,3 +84,18 @@ class _CounterViewState extends State<CounterView> {
   //     }
   //   });
   // }
+
+  // (3)
+  // // chage value
+  // changeValue() {
+  //   setState(() {
+  //     isZero = !isZero;
+  //   });
+  // }
+  // Text(
+  //             'Value: ${isZero ? 0 : 1}',
+  //             style: const TextStyle(
+  //                 fontSize: 40,
+  //                 color: Colors.deepPurple,
+  //                 fontWeight: FontWeight.w700),
+  //           ),
