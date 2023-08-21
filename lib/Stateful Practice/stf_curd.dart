@@ -28,6 +28,45 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
     setState(() {});
   }
 
+  alerDialogEdit() {
+    setState(() {
+      showDialog(
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            title: const Text(
+              'Do you want to edit ?',
+              style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+            ),
+            content: TextField(
+              controller: textEditController,
+              cursorColor: Colors.deepPurple,
+              decoration: const InputDecoration(
+                hintText: 'Edit Text',
+                hintStyle: TextStyle(
+                    fontSize: 14,
+                    color: Colors.grey,
+                    fontWeight: FontWeight.w800),
+                // fillColor: Colors.grey,
+                border: InputBorder.none,
+              ),
+            ),
+            actions: [
+              TextButton(onPressed: () {}, child: const Text('Cancel')),
+              TextButton(
+                  onPressed: () {
+                    setState(() {
+                      friensList.add(textEditController.text);
+                    });
+                  },
+                  child: const Text('Done'))
+            ],
+          );
+        },
+      );
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -152,22 +191,7 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
                           const Spacer(),
                           IconButton(
                               onPressed: () {
-                                AlertDialog(
-                                  title: const Text('Edit ?'),
-                                  content: TextField(
-                                    controller: textEditController,
-                                    cursorColor: Colors.deepPurple,
-                                    decoration: const InputDecoration(
-                                      hintText: 'Edit Text',
-                                      hintStyle: TextStyle(
-                                          fontSize: 12,
-                                          color: Colors.grey,
-                                          fontWeight: FontWeight.w800),
-                                      // fillColor: Colors.grey,
-                                      border: InputBorder.none,
-                                    ),
-                                  ),
-                                );
+                                alerDialogEdit();
                               },
                               icon: const Icon(
                                 Icons.edit,
