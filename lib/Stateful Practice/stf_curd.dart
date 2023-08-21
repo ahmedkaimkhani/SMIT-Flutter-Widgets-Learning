@@ -116,7 +116,9 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
                       IconButton(
                           onPressed: () {
                             setState(() {
-                              const TrashScreen();
+                              Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => TrashScreen(),
+                              ));
                             });
                           },
                           icon: const Icon(
