@@ -25,9 +25,7 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
   }
 
   updateFriend(index) {
-    setState(() {
-      friensList[index] = textEditController.text.trim();
-    });
+    setState(() {});
   }
 
   @override
@@ -154,7 +152,22 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
                           const Spacer(),
                           IconButton(
                               onPressed: () {
-                                updateFriend(index);
+                                AlertDialog(
+                                  title: const Text('Edit ?'),
+                                  content: TextField(
+                                    controller: textEditController,
+                                    cursorColor: Colors.deepPurple,
+                                    decoration: const InputDecoration(
+                                      hintText: 'Edit Text',
+                                      hintStyle: TextStyle(
+                                          fontSize: 12,
+                                          color: Colors.grey,
+                                          fontWeight: FontWeight.w800),
+                                      // fillColor: Colors.grey,
+                                      border: InputBorder.none,
+                                    ),
+                                  ),
+                                );
                               },
                               icon: const Icon(
                                 Icons.edit,
