@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_class_1/Stateful%20Practice/stf_curd.dart';
 
 class TrashScreen extends StatefulWidget {
   const TrashScreen({super.key});
@@ -8,8 +9,6 @@ class TrashScreen extends StatefulWidget {
 }
 
 class _TrashScreenState extends State<TrashScreen> {
-  List trashList = [];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
