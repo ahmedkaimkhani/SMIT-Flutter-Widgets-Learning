@@ -10,12 +10,16 @@ class CounterView extends StatefulWidget {
 class _CounterViewState extends State<CounterView> {
   // counter value
   int counter = 0;
-  bool isTrue = false;
+  bool isTrue = true;
 
-  // counter increment method
-  counterValuePlus() {
+  // chage value
+  changeValue() {
     setState(() {
-      counter == 0 ? counter++ : counter--;
+      if (counter == 0) {
+        counter++;
+      } else {
+        counter--;
+      }
     });
   }
 
@@ -45,7 +49,7 @@ class _CounterViewState extends State<CounterView> {
             ),
             ElevatedButton(
               onPressed: () {
-                counterValuePlus();
+                changeValue();
               },
               child: Padding(
                 padding: const EdgeInsets.only(
@@ -62,3 +66,25 @@ class _CounterViewState extends State<CounterView> {
     );
   }
 }
+
+// Multiple Approches to do same work
+
+// (1)
+// // chage value
+//   changeValue() {
+//     setState(() {
+//       counter == 0 ? counter++ : counter--;
+//     });
+//   }
+
+// (2)
+// chage value
+  // changeValue() {
+  //   setState(() {
+  //     if (counter == 0) {
+  //       counter++;
+  //     } else {
+  //       counter--;
+  //     }
+  //   });
+  // }
