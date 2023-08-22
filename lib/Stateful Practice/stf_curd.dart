@@ -109,7 +109,7 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
                   child: Row(
                     children: [
                       const Text(
-                        'CURD  OPERATIONS',
+                        'C U R D   O P E R A T I O N S',
                         style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
