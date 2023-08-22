@@ -23,7 +23,7 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
     });
   }
 
-  deleteFriend(index) {
+  temporaryDelete(index) {
     setState(() {
       trashList.insert(0, friensList[index]);
       friensList.removeAt(index);
@@ -109,7 +109,7 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
                   child: Row(
                     children: [
                       const Text(
-                        'Curd Operations',
+                        'CURD  OPERATIONS',
                         style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
@@ -222,7 +222,7 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
                                 )),
                             IconButton(
                               onPressed: () {
-                                deleteFriend(index);
+                                temporaryDelete(index);
                               },
                               icon: const Icon(
                                 Icons.delete_outline,

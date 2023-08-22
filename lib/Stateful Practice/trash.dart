@@ -50,7 +50,7 @@ class _TrashScreenState extends State<TrashScreen> {
                             color: Colors.deepPurple),
                       ),
                       const Text(
-                        'Curd Operations',
+                        'CURD  OPERATIONS',
                         style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
