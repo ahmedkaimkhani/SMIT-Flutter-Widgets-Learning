@@ -29,8 +29,8 @@ class _TrashScreenState extends State<TrashScreen> {
   }
 
   deleteBottomSheet(index) {
-    if (permDelete.contains(trashList[index].toString())) {
-      showBottomSheet(
+    if (permDelete.isEmpty) {
+      return showBottomSheet(
         context: context,
         builder: (BuildContext context) {
           return Container(
