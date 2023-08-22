@@ -15,6 +15,7 @@ class _TrashScreenState extends State<TrashScreen> {
     setState(() {
       if (permDelete.contains(trashList[index].toString())) {
         permDelete.remove(trashList[index].toString());
+        deleteBottomSheet(index);
       } else {
         permDelete.add(trashList[index].toString());
       }
@@ -25,6 +26,34 @@ class _TrashScreenState extends State<TrashScreen> {
     setState(() {
       permDelete.clear();
     });
+  }
+
+  deleteBottomSheet(index) {
+    if (permDelete.contains(trashList[index].toString())) {
+      showBottomSheet(
+        context: context,
+        builder: (BuildContext context) {
+          return Container(
+            height: 200,
+            color: Colors.grey,
+            child: Center(
+              child: Row(
+                children: [
+                  ElevatedButton(
+                      onPressed: () {},
+                      child: Column(
+                        children: [
+                          Icon(Icons.delete_outline),
+                          Text('Permanently delete'),
+                        ],
+                      ))
+                ],
+              ),
+            ),
+          );
+        },
+      );
+    }
   }
 
   @override
