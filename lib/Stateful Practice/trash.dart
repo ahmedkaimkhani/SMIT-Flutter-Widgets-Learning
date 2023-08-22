@@ -12,11 +12,13 @@ class TrashScreen extends StatefulWidget {
 
 class _TrashScreenState extends State<TrashScreen> {
   toggleSelection(index) {
-    if (permDelete.contains(trashList[index].toString())) {
-      permDelete.remove(trashList[index].toString());
-    } else {
-      permDelete.add(trashList[index].toString());
-    }
+    setState(() {
+      if (permDelete.contains(trashList[index].toString())) {
+        permDelete.remove(trashList[index].toString());
+      } else {
+        permDelete.add(trashList[index].toString());
+      }
+    });
   }
 
   @override
@@ -130,7 +132,7 @@ class _TrashScreenState extends State<TrashScreen> {
                                 child: Text(
                                   permDelete
                                           .contains(trashList[index].toString())
-                                      ? 'Seleted'
+                                      ? 'Delete'
                                       : 'Select',
                                 ),
                               ),
