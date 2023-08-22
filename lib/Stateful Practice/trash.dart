@@ -11,7 +11,14 @@ class TrashScreen extends StatefulWidget {
 }
 
 class _TrashScreenState extends State<TrashScreen> {
-  permanentDelete() {}
+  toggleSelection(index) {
+    if (permDelete.contains(trashList[index].toString())) {
+      permDelete.remove(trashList[index].toString());
+    } else {
+      permDelete.add(trashList[index].toString());
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -71,6 +78,11 @@ class _TrashScreenState extends State<TrashScreen> {
                   itemCount: trashList.length,
                   itemBuilder: (context, index) {
                     return InkWell(
+                      onLongPress: () {
+                        toggleSelection(index);
+                        print('My Value');
+                        print(permDelete.toString());
+                      },
                       child: Container(
                         margin: const EdgeInsets.only(
                           top: 20,
@@ -106,7 +118,22 @@ class _TrashScreenState extends State<TrashScreen> {
                               ),
                               const Spacer(),
                               ElevatedButton(
-                                  onPressed: () {}, child: Text('Select'))
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: permDelete
+                                          .contains(trashList[index].toString())
+                                      ? Colors.red
+                                      : Colors.deepPurple,
+                                ),
+                                onPressed: () {
+                                  toggleSelection(index);
+                                },
+                                child: Text(
+                                  permDelete
+                                          .contains(trashList[index].toString())
+                                      ? 'Seleted'
+                                      : 'Select',
+                                ),
+                              ),
                             ],
                           ),
                         ),
