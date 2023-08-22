@@ -29,7 +29,7 @@ class _TrashScreenState extends State<TrashScreen> {
   }
 
   deleteBottomSheet(index) {
-    if (permDelete.isEmpty) {
+    if (permDelete.contains(trashList[index].toString())) {
       return showBottomSheet(
         context: context,
         builder: (BuildContext context) {
@@ -42,7 +42,7 @@ class _TrashScreenState extends State<TrashScreen> {
                   ElevatedButton(
                       onPressed: () {},
                       child: Column(
-                        children: [
+                        children: const [
                           Icon(Icons.delete_outline),
                           Text('Permanently delete'),
                         ],
@@ -105,8 +105,12 @@ class _TrashScreenState extends State<TrashScreen> {
                             color: Colors.deepPurple),
                       ),
                       const Spacer(),
-                      const Icon(Icons.restore_from_trash_sharp,
-                          color: Colors.deepPurple)
+                      IconButton(
+                          onPressed: () {
+                            listClear();
+                          },
+                          icon: const Icon(Icons.restore_from_trash_sharp,
+                              color: Colors.deepPurple))
                     ],
                   ),
                 ),
