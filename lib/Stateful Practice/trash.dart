@@ -107,7 +107,7 @@ class _TrashScreenState extends State<TrashScreen> {
                       const Spacer(),
                       IconButton(
                           onPressed: () {
-                            listClear();
+                            trashList.remove(listClear());
                           },
                           icon: const Icon(Icons.restore_from_trash_sharp,
                               color: Colors.deepPurple))
