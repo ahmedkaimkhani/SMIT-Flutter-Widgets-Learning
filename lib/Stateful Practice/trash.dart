@@ -20,7 +20,8 @@ class _TrashScreenState extends State<TrashScreen> {
             mainAxisSize: MainAxisSize.min,
             children: [
               Container(
-                margin: const EdgeInsets.only(top: 20, left: 15, right: 15),
+                margin: const EdgeInsets.only(
+                    top: 20, left: 15, right: 15, bottom: 20),
                 decoration: BoxDecoration(
                     color: Colors.grey[300],
                     borderRadius: BorderRadius.circular(8),
@@ -62,77 +63,63 @@ class _TrashScreenState extends State<TrashScreen> {
                   ),
                 ),
               ),
-              Container(
-                margin: const EdgeInsets.only(
-                    top: 25, left: 15, right: 15, bottom: 20),
-                decoration: BoxDecoration(
-                    color: Colors.grey[300],
-                    borderRadius: BorderRadius.circular(5),
-                    // border: Border.all(width: 0.5, color: Colors.grey),
-                    boxShadow: [
-                      BoxShadow(
-                          blurRadius: 15,
-                          spreadRadius: 1,
-                          offset: const Offset(4, 4),
-                          color: Colors.grey.shade500),
-                      const BoxShadow(
-                          blurRadius: 15,
-                          spreadRadius: 1,
-                          offset: Offset(-4, -4),
-                          color: Colors.white),
-                    ]),
-              ),
-              ListView.builder(
-                itemCount: trashList.length,
-                itemBuilder: (context, index) {
-                  return Container(
-                    margin: const EdgeInsets.only(top: 20, left: 15, right: 15),
-                    decoration: BoxDecoration(
-                        color: Colors.grey[300],
-                        borderRadius: BorderRadius.circular(8),
-                        // border: Border.all(width: 0.5, color: Colors.grey),
-                        boxShadow: [
-                          BoxShadow(
-                              blurRadius: 15,
-                              spreadRadius: 1,
-                              offset: const Offset(4, 4),
-                              color: Colors.grey.shade500),
-                          const BoxShadow(
-                              blurRadius: 15,
-                              spreadRadius: 1,
-                              offset: Offset(-4, -4),
-                              color: Colors.white),
-                        ]),
-                    child: Padding(
-                      padding: const EdgeInsets.all(12),
-                      child: Row(
-                        children: [
-                          Text(
-                            trashList[index].toString(),
-                            style: const TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.deepPurple),
-                          ),
-                          const Spacer(),
-                          IconButton(
+              Expanded(
+                child: ListView.builder(
+                  itemCount: trashList.length,
+                  itemBuilder: (context, index) {
+                    return Container(
+                      margin: const EdgeInsets.only(
+                        top: 20,
+                        left: 15,
+                        right: 15,
+                      ),
+                      decoration: BoxDecoration(
+                          color: Colors.grey[300],
+                          borderRadius: BorderRadius.circular(8),
+                          // border: Border.all(width: 0.5, color: Colors.grey),
+                          boxShadow: [
+                            BoxShadow(
+                                blurRadius: 15,
+                                spreadRadius: 1,
+                                offset: const Offset(4, 4),
+                                color: Colors.grey.shade500),
+                            const BoxShadow(
+                                blurRadius: 15,
+                                spreadRadius: 1,
+                                offset: Offset(-4, -4),
+                                color: Colors.white),
+                          ]),
+                      child: Padding(
+                        padding: const EdgeInsets.all(12),
+                        child: Row(
+                          children: [
+                            Text(
+                              trashList[index].toString(),
+                              style: const TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.deepPurple),
+                            ),
+                            const Spacer(),
+                            IconButton(
+                                onPressed: () {},
+                                icon: const Icon(
+                                  Icons.edit,
+                                  color: Colors.deepPurple,
+                                )),
+                            IconButton(
                               onPressed: () {},
                               icon: const Icon(
-                                Icons.edit,
+                                Icons.delete_outline,
                                 color: Colors.deepPurple,
-                              )),
-                          IconButton(
-                            onPressed: () {},
-                            icon: const Icon(
-                              Icons.delete_outline,
-                              color: Colors.deepPurple,
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
-                    ),
-                  );
-                },
+                    );
+                  },
+                ),
               )
             ],
           ),
