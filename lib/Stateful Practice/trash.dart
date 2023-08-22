@@ -21,6 +21,12 @@ class _TrashScreenState extends State<TrashScreen> {
     });
   }
 
+  listClear() {
+    setState(() {
+      permDelete.clear();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,6 +63,7 @@ class _TrashScreenState extends State<TrashScreen> {
                       IconButton(
                         onPressed: () {
                           Navigator.pop(context);
+                          listClear();
                         },
                         icon: const Icon(Icons.arrow_back,
                             color: Colors.deepPurple),

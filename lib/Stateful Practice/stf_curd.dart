@@ -19,8 +19,8 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
   addFriend() {
     setState(() {
       friensList.add(textEditController.text);
-      textEditController.clear();
     });
+    textEditController.clear();
   }
 
   temporaryDelete(index) {
@@ -214,6 +214,7 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
                             const Spacer(),
                             IconButton(
                                 onPressed: () {
+                                  updateController.text = friensList[index];
                                   updateFriend(index);
                                 },
                                 icon: const Icon(
