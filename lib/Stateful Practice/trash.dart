@@ -100,20 +100,14 @@ class _TrashScreenState extends State<TrashScreen> {
                                   fontWeight: FontWeight.bold,
                                   color: Colors.deepPurple),
                             ),
-                            const Spacer(),
-                            IconButton(
-                                onPressed: () {},
-                                icon: const Icon(
-                                  Icons.edit,
-                                  color: Colors.deepPurple,
-                                )),
-                            IconButton(
-                              onPressed: () {},
-                              icon: const Icon(
-                                Icons.delete_outline,
-                                color: Colors.deepPurple,
-                              ),
-                            ),
+                            // const Spacer(),
+                            // IconButton(
+                            //   onPressed: () {},
+                            //   icon: const Icon(
+                            //     Icons.delete_outline,
+                            //     color: Colors.deepPurple,
+                            //   ),
+                            // ),
                           ],
                         ),
                       ),

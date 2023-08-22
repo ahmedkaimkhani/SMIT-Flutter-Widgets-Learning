@@ -25,7 +25,7 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
 
   deleteFriend(index) {
     setState(() {
-      trashList.add(friensList[index]);
+      trashList.insert(0, friensList[index]);
       friensList.removeAt(index);
     });
   }
