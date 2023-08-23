@@ -32,6 +32,8 @@ class _RestoreWidgetState extends State<RestoreWidget> {
                 setState(() {
                   friensList.addAll(trashList);
                   trashList.clear();
+                  print('My Value');
+                  print(friensList);
                 });
               },
               child: Container(
