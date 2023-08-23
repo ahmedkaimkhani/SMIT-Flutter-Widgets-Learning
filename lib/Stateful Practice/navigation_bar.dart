@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_class_1/Stateful%20Practice/stf_curd.dart';
+import 'package:flutter_class_1/Stateful%20Practice/trash.dart';
 
 class RestoreWidget extends StatefulWidget {
   const RestoreWidget({super.key});
@@ -11,6 +12,7 @@ class RestoreWidget extends StatefulWidget {
 class _RestoreWidgetState extends State<RestoreWidget> {
   clearTrash() {
     setState(() {
+      // trashList.removeWhere((element) => trashList[element]);
       trashList.clear();
     });
   }
