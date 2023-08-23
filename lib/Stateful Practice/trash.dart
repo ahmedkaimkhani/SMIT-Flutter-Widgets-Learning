@@ -55,15 +55,6 @@ class _TrashScreenState extends State<TrashScreen> {
   //   }
   // }
 
-  deleteFunction(index) {
-    if (permDelete.contains(trashList[index].toString())) {
-      setState(() {
-        permDelete.remove(trashList[index].toString());
-        trashList.removeAt(index); // Remove from trashList
-      });
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
