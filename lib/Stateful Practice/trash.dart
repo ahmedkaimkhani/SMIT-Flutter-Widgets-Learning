@@ -71,7 +71,6 @@ class _TrashScreenState extends State<TrashScreen> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const RestoreWidget(),
               Container(
                 margin: const EdgeInsets.only(
                     top: 20, left: 15, right: 15, bottom: 20),
@@ -197,7 +196,8 @@ class _TrashScreenState extends State<TrashScreen> {
                     );
                   },
                 ),
-              )
+              ),
+              RestoreWidget(),
             ],
           ),
         ),
