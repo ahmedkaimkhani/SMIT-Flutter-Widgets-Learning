@@ -178,6 +178,8 @@ class _TrashScreenState extends State<TrashScreen> {
                                           .remove(trashList[index].toString());
                                     }
                                   });
+                                  print('My Value');
+                                  print(permDelete.toString());
                                 },
                                 child: Text(
                                   permDelete
