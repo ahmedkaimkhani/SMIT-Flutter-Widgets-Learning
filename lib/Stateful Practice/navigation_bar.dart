@@ -47,6 +47,8 @@ class _RestoreWidgetState extends State<RestoreWidget> {
             child: InkWell(
               onTap: () {
                 clearTrash();
+                print('My value');
+                print(trashList.toString());
               },
               child: Container(
                 child: Column(
