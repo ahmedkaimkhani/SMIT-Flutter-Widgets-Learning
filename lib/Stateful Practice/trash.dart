@@ -15,7 +15,6 @@ class _TrashScreenState extends State<TrashScreen> {
     setState(() {
       if (permDelete.contains(trashList[index].toString())) {
         permDelete.remove(trashList[index].toString());
-        deleteBottomSheet(index);
       } else {
         permDelete.add(trashList[index].toString());
       }
@@ -28,31 +27,40 @@ class _TrashScreenState extends State<TrashScreen> {
     });
   }
 
-  deleteBottomSheet(index) {
+  // deleteBottomSheet(index) {
+  //   if (permDelete.contains(trashList[index].toString())) {
+  //     return showBottomSheet(
+  //       context: context,
+  //       builder: (BuildContext context) {
+  //         return Container(
+  //           height: 200,
+  //           color: Colors.grey,
+  //           child: Center(
+  //             child: Row(
+  //               children: [
+  //                 ElevatedButton(
+  //                     onPressed: () {},
+  //                     child: Column(
+  //                       children: const [
+  //                         Icon(Icons.delete_outline),
+  //                         Text('Permanently delete'),
+  //                       ],
+  //                     ))
+  //               ],
+  //             ),
+  //           ),
+  //         );
+  //       },
+  //     );
+  //   }
+  // }
+
+  deleteFunction(index) {
     if (permDelete.contains(trashList[index].toString())) {
-      return showBottomSheet(
-        context: context,
-        builder: (BuildContext context) {
-          return Container(
-            height: 200,
-            color: Colors.grey,
-            child: Center(
-              child: Row(
-                children: [
-                  ElevatedButton(
-                      onPressed: () {},
-                      child: Column(
-                        children: const [
-                          Icon(Icons.delete_outline),
-                          Text('Permanently delete'),
-                        ],
-                      ))
-                ],
-              ),
-            ),
-          );
-        },
-      );
+      setState(() {
+        permDelete.remove(trashList[index].toString());
+        trashList.removeAt(index); // Remove from trashList
+      });
     }
   }
 
@@ -106,9 +114,7 @@ class _TrashScreenState extends State<TrashScreen> {
                       ),
                       const Spacer(),
                       IconButton(
-                          onPressed: () {
-                            trashList.remove(listClear());
-                          },
+                          onPressed: () {},
                           icon: const Icon(Icons.restore_from_trash_sharp,
                               color: Colors.deepPurple))
                     ],
