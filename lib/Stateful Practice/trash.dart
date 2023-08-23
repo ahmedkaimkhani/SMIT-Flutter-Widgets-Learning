@@ -30,37 +30,35 @@ class _TrashScreenState extends State<TrashScreen> {
   void deleteSelectedItems() {
     setState(() {
       trashList.removeWhere((item) => permDelete.contains(item));
-      // permDelete.clear();
+      permDelete.clear();
     });
   }
 
-  // deleteBottomSheet(index) {
-  //   if (permDelete.contains(trashList[index].toString())) {
-  //     return showBottomSheet(
-  //       context: context,
-  //       builder: (BuildContext context) {
-  //         return Container(
-  //           height: 200,
-  //           color: Colors.grey,
-  //           child: Center(
-  //             child: Row(
-  //               children: [
-  //                 ElevatedButton(
-  //                     onPressed: () {},
-  //                     child: Column(
-  //                       children: const [
-  //                         Icon(Icons.delete_outline),
-  //                         Text('Permanently delete'),
-  //                       ],
-  //                     ))
-  //               ],
-  //             ),
-  //           ),
-  //         );
-  //       },
-  //     );
-  //   }
-  // }
+  deleteBottomSheet(index) {
+    return showBottomSheet(
+      context: context,
+      builder: (BuildContext context) {
+        return Container(
+          height: 200,
+          color: Colors.grey,
+          child: Center(
+            child: Row(
+              children: [
+                ElevatedButton(
+                    onPressed: () {},
+                    child: Column(
+                      children: const [
+                        Icon(Icons.delete_outline),
+                        Text('Permanently delete'),
+                      ],
+                    ))
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
