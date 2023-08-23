@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_class_1/Stateful%20Practice/trash.dart';
 
+List friensList = [];
 List trashList = [];
 
 class StfCurdPractice extends StatefulWidget {
@@ -11,8 +12,6 @@ class StfCurdPractice extends StatefulWidget {
 }
 
 class _StfCurdPracticeState extends State<StfCurdPractice> {
-  List friensList = [];
-
   TextEditingController textEditController = TextEditingController();
   TextEditingController updateController = TextEditingController();
 

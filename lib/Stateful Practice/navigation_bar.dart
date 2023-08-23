@@ -28,7 +28,12 @@ class _RestoreWidgetState extends State<RestoreWidget> {
         children: [
           Expanded(
             child: InkWell(
-              onTap: () {},
+              onTap: () {
+                setState(() {
+                  friensList.addAll(trashList);
+                  trashList.clear();
+                });
+              },
               child: Container(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -39,7 +44,7 @@ class _RestoreWidgetState extends State<RestoreWidget> {
                       color: Colors.deepPurple,
                     ),
                     Text(
-                      "Restore",
+                      "Restore all",
                       style: TextStyle(fontSize: 12, color: Colors.deepPurple),
                     ),
                   ],
@@ -65,7 +70,7 @@ class _RestoreWidgetState extends State<RestoreWidget> {
                       color: Colors.deepPurple,
                     ),
                     Text(
-                      "Permanently delete",
+                      "Delete all",
                       style: TextStyle(fontSize: 12, color: Colors.deepPurple),
                     ),
                   ],
