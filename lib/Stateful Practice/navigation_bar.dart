@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class NavigatorBar extends StatefulWidget {
-  const NavigatorBar({super.key});
+class RestoreWidget extends StatefulWidget {
+  const RestoreWidget({super.key});
 
   @override
-  State<NavigatorBar> createState() => _NavigatorBarState();
+  State<RestoreWidget> createState() => _RestoreWidgetState();
 }
 
-class _NavigatorBarState extends State<NavigatorBar> {
+class _RestoreWidgetState extends State<RestoreWidget> {
   @override
   Widget build(BuildContext context) {
     return Stack(

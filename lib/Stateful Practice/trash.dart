@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_class_1/Stateful%20Practice/navigation_bar.dart';
 import 'package:flutter_class_1/Stateful%20Practice/stf_curd.dart';
 
 List permDelete = [];
@@ -70,6 +71,7 @@ class _TrashScreenState extends State<TrashScreen> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
+              const RestoreWidget(),
               Container(
                 margin: const EdgeInsets.only(
                     top: 20, left: 15, right: 15, bottom: 20),
