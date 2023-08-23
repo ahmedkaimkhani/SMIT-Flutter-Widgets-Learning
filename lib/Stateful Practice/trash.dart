@@ -197,6 +197,9 @@ class _TrashScreenState extends State<TrashScreen> {
                   },
                 ),
               ),
+              Divider(
+                color: Colors.grey,
+              ),
               RestoreWidget(),
             ],
           ),
