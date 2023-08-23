@@ -174,8 +174,8 @@ class _TrashScreenState extends State<TrashScreen> {
                                   setState(() {
                                     if (permDelete.contains(
                                         trashList[index].toString())) {
-                                      permDelete
-                                          .remove(trashList[index].toString());
+                                      trashList.removeAt(index);
+                                      // permDelete.clear();
                                     }
                                   });
                                   print('My Value');
