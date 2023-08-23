@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_class_1/Stateful%20Practice/stf_curd.dart';
 
 class RestoreWidget extends StatefulWidget {
   const RestoreWidget({super.key});
@@ -8,6 +9,12 @@ class RestoreWidget extends StatefulWidget {
 }
 
 class _RestoreWidgetState extends State<RestoreWidget> {
+  clearTrash() {
+    setState(() {
+      trashList.clear();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -38,7 +45,9 @@ class _RestoreWidgetState extends State<RestoreWidget> {
           ),
           Expanded(
             child: InkWell(
-              onTap: () {},
+              onTap: () {
+                clearTrash();
+              },
               child: Container(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
