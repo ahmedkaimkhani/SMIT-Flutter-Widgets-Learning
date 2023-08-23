@@ -3,7 +3,9 @@ import 'package:flutter_class_1/Stateful%20Practice/stf_curd.dart';
 import 'package:flutter_class_1/Stateful%20Practice/trash.dart';
 
 class RestoreWidget extends StatefulWidget {
-  const RestoreWidget({super.key});
+  const RestoreWidget({
+    super.key,
+  });
 
   @override
   State<RestoreWidget> createState() => _RestoreWidgetState();
