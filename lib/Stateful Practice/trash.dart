@@ -27,6 +27,13 @@ class _TrashScreenState extends State<TrashScreen> {
     });
   }
 
+  void deleteSelectedItems() {
+    setState(() {
+      trashList.removeWhere((item) => permDelete.contains(item));
+      // permDelete.clear();
+    });
+  }
+
   // deleteBottomSheet(index) {
   //   if (permDelete.contains(trashList[index].toString())) {
   //     return showBottomSheet(
@@ -105,7 +112,9 @@ class _TrashScreenState extends State<TrashScreen> {
                       ),
                       const Spacer(),
                       IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            deleteSelectedItems();
+                          },
                           icon: const Icon(Icons.restore_from_trash_sharp,
                               color: Colors.deepPurple))
                     ],
