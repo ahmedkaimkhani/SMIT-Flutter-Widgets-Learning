@@ -35,32 +35,6 @@ class _TrashScreenState extends State<TrashScreen> {
     });
   }
 
-  deleteBottomSheet(index) {
-    return showBottomSheet(
-      context: context,
-      builder: (BuildContext context) {
-        return Container(
-          height: 200,
-          color: Colors.grey,
-          child: Center(
-            child: Row(
-              children: [
-                ElevatedButton(
-                    onPressed: () {},
-                    child: Column(
-                      children: const [
-                        Icon(Icons.delete_outline),
-                        Text('Permanently delete'),
-                      ],
-                    ))
-              ],
-            ),
-          ),
-        );
-      },
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
