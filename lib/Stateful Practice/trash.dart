@@ -171,7 +171,13 @@ class _TrashScreenState extends State<TrashScreen> {
                                       : Colors.deepPurple,
                                 ),
                                 onPressed: () {
-                                  toggleSelection(index);
+                                  setState(() {
+                                    if (permDelete.contains(
+                                        trashList[index].toString())) {
+                                      permDelete
+                                          .remove(trashList[index].toString());
+                                    }
+                                  });
                                 },
                                 child: Text(
                                   permDelete
