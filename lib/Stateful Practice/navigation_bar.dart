@@ -12,6 +12,15 @@ class RestoreWidget extends StatefulWidget {
 }
 
 class _RestoreWidgetState extends State<RestoreWidget> {
+  restoreAllItem() {
+    setState(() {
+      friensList.addAll(trashList);
+      trashList.clear();
+      print('My Value');
+      print(friensList);
+    });
+  }
+
   clearTrash() {
     setState(() {
       // trashList.removeWhere((element) => trashList[element]);
@@ -28,14 +37,7 @@ class _RestoreWidgetState extends State<RestoreWidget> {
         children: [
           Expanded(
             child: InkWell(
-              onTap: () {
-                setState(() {
-                  friensList.addAll(trashList);
-                  trashList.clear();
-                  print('My Value');
-                  print(friensList);
-                });
-              },
+              onTap: () {},
               child: Container(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
