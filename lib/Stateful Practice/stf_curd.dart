@@ -76,6 +76,11 @@ class _StfCurdPracticeState extends State<StfCurdPractice> {
   }
 
   @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey[300],

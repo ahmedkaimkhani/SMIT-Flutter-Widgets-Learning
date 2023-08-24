@@ -12,6 +12,10 @@ class TrashScreen extends StatefulWidget {
 }
 
 class _TrashScreenState extends State<TrashScreen> {
+  // didChangeDependencies
+
+  // didUpdateDependencies
+
   toggleSelection(index) {
     setState(() {
       if (permDelete.contains(trashList[index].toString())) {
@@ -60,6 +64,10 @@ class _TrashScreenState extends State<TrashScreen> {
   //     },
   //   );
   // }
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+  }
 
   @override
   Widget build(BuildContext context) {

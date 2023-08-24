@@ -29,6 +29,11 @@ class _RestoreWidgetState extends State<RestoreWidget> {
   }
 
   @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Container(
       height: 50,
@@ -37,7 +42,9 @@ class _RestoreWidgetState extends State<RestoreWidget> {
         children: [
           Expanded(
             child: InkWell(
-              onTap: () {},
+              onTap: () {
+                restoreAllItem();
+              },
               child: Container(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
