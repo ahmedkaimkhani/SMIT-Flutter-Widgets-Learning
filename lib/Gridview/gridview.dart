@@ -8,8 +8,8 @@ class MyGridView extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: GridView(
-          gridDelegate:
-              SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 5),
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 5, crossAxisSpacing: 10),
           children: [
             Container(
               height: 100,
