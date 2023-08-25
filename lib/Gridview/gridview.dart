@@ -7,7 +7,7 @@ class MyGridView extends StatelessWidget {
       'title': 'Lamborghini',
       'price': '\$100',
       'image':
-          'https://www.wallpaperflare.com/lamborghini-cool-car-famous-brand-dark-background-black-window-wallpaper-mtbmf'
+          'https://c4.wallpaperflare.com/wallpaper/1011/898/396/lamborghini-cool-car-famous-brand-dark-background-black-window-wallpaper-preview.jpg'
     },
     {
       'title': 'Lamborghini Aventador',
@@ -61,15 +61,30 @@ class MyGridView extends StatelessWidget {
           padding: const EdgeInsets.all(12),
           itemCount: carsList.length,
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-              crossAxisSpacing: 10,
-              mainAxisExtent: 200,
-              mainAxisSpacing: 10),
+            crossAxisCount: 2,
+            crossAxisSpacing: 12,
+            mainAxisSpacing: 12,
+            mainAxisExtent: 250,
+          ),
           itemBuilder: (context, index) {
             return Container(
               decoration: BoxDecoration(
                 color: Colors.red,
-                borderRadius: BorderRadius.circular(12),
+                borderRadius: BorderRadius.circular(16),
+              ),
+              child: Column(
+                children: [
+                  ClipRRect(
+                    borderRadius: const BorderRadius.only(
+                        topLeft: Radius.circular(16),
+                        topRight: Radius.circular(16)),
+                    child: Image.network(
+                      '${carsList.elementAt(index)['image']}',
+                      height: 150,
+                      fit: BoxFit.cover,
+                    ),
+                  )
+                ],
               ),
             );
           },
