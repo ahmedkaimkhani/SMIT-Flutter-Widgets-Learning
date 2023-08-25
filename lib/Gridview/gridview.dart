@@ -58,15 +58,19 @@ class MyGridView extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: GridView.builder(
-          itemCount: 5,
+          padding: const EdgeInsets.all(12),
+          itemCount: carsList.length,
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
               crossAxisSpacing: 10,
-              mainAxisExtent: 300,
+              mainAxisExtent: 200,
               mainAxisSpacing: 10),
           itemBuilder: (context, index) {
             return Container(
-              color: Colors.red,
+              decoration: BoxDecoration(
+                color: Colors.red,
+                borderRadius: BorderRadius.circular(12),
+              ),
             );
           },
         ),
