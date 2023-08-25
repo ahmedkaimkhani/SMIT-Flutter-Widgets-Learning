@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class MyGridView extends StatelessWidget {
   MyGridView({Key? key}) : super(key: key);
-  List<Map<String, dynamic>> carsList = [
+  final List<Map<String, dynamic>> carsList = [
     {
       'title': 'Lamborghini',
       'price': '\$100',
