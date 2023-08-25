@@ -73,6 +73,7 @@ class MyGridView extends StatelessWidget {
                 borderRadius: BorderRadius.circular(16),
               ),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   ClipRRect(
                     borderRadius: const BorderRadius.only(
@@ -81,7 +82,20 @@ class MyGridView extends StatelessWidget {
                     child: Image.network(
                       '${carsList.elementAt(index)['image']}',
                       height: 150,
+                      width: double.infinity,
                       fit: BoxFit.cover,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          '${carsList.elementAt(index)['title']}',
+                          style: TextStyle(fontSize: 20),
+                        ),
+                      ],
                     ),
                   )
                 ],
