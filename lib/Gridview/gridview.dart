@@ -6,13 +6,13 @@ class MyGridView extends StatelessWidget {
   MyGridView({Key? key}) : super(key: key);
   final List<Map<String, dynamic>> carsList = [
     {
-      'title': 'Lamborghini',
+      'title': 'Lamborghini grey',
       'price': '\$100',
       'image':
           'https://c4.wallpaperflare.com/wallpaper/1011/898/396/lamborghini-cool-car-famous-brand-dark-background-black-window-wallpaper-preview.jpg'
     },
     {
-      'title': 'Lamborghini Aventador',
+      'title': 'Lamborghini',
       'price': '\$200',
       'image':
           'https://c4.wallpaperflare.com/wallpaper/217/249/131/lamborghini-aventador-sports-car-cool-black-car-wallpaper-preview.jpg'
@@ -66,7 +66,7 @@ class MyGridView extends StatelessWidget {
             crossAxisCount: 2,
             crossAxisSpacing: 12,
             mainAxisSpacing: 12,
-            mainAxisExtent: 300,
+            mainAxisExtent: 270,
           ),
           itemBuilder: (context, index) {
             return Container(
@@ -108,6 +108,7 @@ class MyGridView extends StatelessWidget {
                           height: 08,
                         ),
                         Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             IconButton(
                                 onPressed: () {},
