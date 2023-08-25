@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:cupertino_icons/cupertino_icons.dart';
 
 class MyGridView extends StatelessWidget {
   MyGridView({Key? key}) : super(key: key);
@@ -64,12 +66,12 @@ class MyGridView extends StatelessWidget {
             crossAxisCount: 2,
             crossAxisSpacing: 12,
             mainAxisSpacing: 12,
-            mainAxisExtent: 250,
+            mainAxisExtent: 300,
           ),
           itemBuilder: (context, index) {
             return Container(
               decoration: BoxDecoration(
-                color: Colors.red,
+                color: Colors.amberAccent[200],
                 borderRadius: BorderRadius.circular(16),
               ),
               child: Column(
@@ -91,13 +93,33 @@ class MyGridView extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          '${carsList.elementAt(index)['title']}',
-                          style: TextStyle(fontSize: 20),
+                        Text('${carsList.elementAt(index)['title']}',
+                            style: Theme.of(context).textTheme.subtitle1!.merge(
+                                const TextStyle(fontWeight: FontWeight.bold))),
+                        const SizedBox(
+                          height: 08,
                         ),
+                        Text('${carsList.elementAt(index)['price']}',
+                            style: Theme.of(context).textTheme.subtitle2!.merge(
+                                TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.grey.shade700))),
+                        const SizedBox(
+                          height: 08,
+                        ),
+                        Row(
+                          children: [
+                            IconButton(
+                                onPressed: () {},
+                                icon: const Icon(CupertinoIcons.heart)),
+                            IconButton(
+                                onPressed: () {},
+                                icon: const Icon(CupertinoIcons.cart))
+                          ],
+                        )
                       ],
                     ),
-                  )
+                  ),
                 ],
               ),
             );
