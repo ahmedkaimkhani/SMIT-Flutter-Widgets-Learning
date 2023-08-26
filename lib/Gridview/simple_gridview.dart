@@ -8,10 +8,17 @@ class SimpleGridView extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: GridView(
-          gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-            maxCrossAxisExtent: 200,
-          ),
+          gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+              maxCrossAxisExtent: 100,
+              crossAxisSpacing: 10,
+              childAspectRatio: 0.5),
           children: [
+            Container(
+              color: Colors.amber,
+            ),
+            Container(
+              color: Colors.deepPurple,
+            ),
             Container(
               color: Colors.amber,
             ),
