@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_class_1/Navigator/screen_3.dart';
 
 class PushReplNavigator extends StatelessWidget {
   const PushReplNavigator({super.key});
@@ -11,7 +12,12 @@ class PushReplNavigator extends StatelessWidget {
       ),
       body: Center(
         child: ElevatedButton(
-            onPressed: () {}, child: const Text('Move to 3rd Page')),
+            onPressed: () {
+              Navigator.of(context).pushReplacement(MaterialPageRoute(
+                builder: (context) => const ThirdScreen(),
+              ));
+            },
+            child: const Text('Move to 3rd Page')),
       ),
     );
   }
