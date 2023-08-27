@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class PushNamedNavigator extends StatelessWidget {
-  const PushNamedNavigator({super.key});
+class PushNamedNavigator2 extends StatelessWidget {
+  const PushNamedNavigator2({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -10,8 +10,11 @@ class PushNamedNavigator extends StatelessWidget {
         title: const Text('PushNamed Navigator Two'),
       ),
       body: Center(
-        child:
-            ElevatedButton(onPressed: () {}, child: const Text('Text Button')),
+        child: ElevatedButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/secondscreen');
+            },
+            child: const Text('Move to 3rd Page')),
       ),
     );
   }

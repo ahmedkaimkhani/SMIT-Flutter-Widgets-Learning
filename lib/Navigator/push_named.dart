@@ -7,11 +7,14 @@ class PushNamedNavigator extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('PushNamed Navigator'),
+        title: const Text('PushNamed Navigator one'),
       ),
       body: Center(
         child: ElevatedButton(
-            onPressed: () {}, child: const Text('Move to 2nd Page')),
+            onPressed: () {
+              Navigator.pushNamed(context, '/firstscreen');
+            },
+            child: const Text('Move to 2nd Page')),
       ),
     );
   }
