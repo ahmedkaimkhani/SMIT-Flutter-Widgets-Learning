@@ -10,13 +10,25 @@ class StackWidget extends StatelessWidget {
         centerTitle: true,
         title: const Text('Stock Practice'),
       ),
-      body: Stack(children: [
-        Container(
-          color: Colors.red,
-          height: 200,
-          width: 200,
-        )
-      ]),
+      body: Center(
+        child: Stack(children: [
+          Container(
+            color: Colors.red,
+            height: 120,
+            width: 120,
+          ),
+          Container(
+            color: Colors.yellow,
+            height: 100,
+            width: 100,
+          ),
+          Container(
+            color: Colors.green,
+            height: 80,
+            width: 80,
+          )
+        ]),
+      ),
     );
   }
 }
