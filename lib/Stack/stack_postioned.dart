@@ -15,6 +15,12 @@ class StackPractice extends StatelessWidget {
             radius: 30,
             backgroundColor: Colors.red,
           ),
+          Positioned(
+            child: CircleAvatar(
+              radius: 10,
+              backgroundColor: Colors.green,
+            ),
+          ),
         ],
       ),
     );
