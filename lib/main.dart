@@ -3,7 +3,11 @@ import 'package:flutter_class_1/Counter/counter_2.dart';
 import 'package:flutter_class_1/Counter/counter_increment.dart';
 import 'package:flutter_class_1/Gridview/gridview.dart';
 import 'package:flutter_class_1/Gridview/simple_gridview.dart';
+import 'package:flutter_class_1/MediaQuery/media_query.dart';
+import 'package:flutter_class_1/Navigator/push_named.dart';
+import 'package:flutter_class_1/Navigator/push_named_2.dart';
 import 'package:flutter_class_1/Navigator/push_navigator.dart';
+import 'package:flutter_class_1/Navigator/screen_3.dart';
 import 'package:flutter_class_1/Stack/stack.pratice.dart';
 import 'package:flutter_class_1/Stateful%20Practice/stf_curd.dart';
 import 'package:flutter_class_1/home_screen.dart';
@@ -21,7 +25,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: StackWidget(),
+      home: MediaQueryWidget(),
     );
   }
 }
+
+
+
+// For Navigator Push Named 
+// initialRoute: "/",
+//       routes: {
+//         '/': (context) => const PushNamedNavigator(),
+//         '/firstscreen': (context) => const PushNamedNavigator2(),
+//         '/secondscreen': (context) => const ThirdScreen()
+//       },
