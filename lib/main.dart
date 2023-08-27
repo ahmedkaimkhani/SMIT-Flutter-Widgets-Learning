@@ -9,6 +9,7 @@ import 'package:flutter_class_1/Navigator/push_named_2.dart';
 import 'package:flutter_class_1/Navigator/push_navigator.dart';
 import 'package:flutter_class_1/Navigator/screen_3.dart';
 import 'package:flutter_class_1/Stack/stack.pratice.dart';
+import 'package:flutter_class_1/Stack/stack_postioned.dart';
 import 'package:flutter_class_1/Stateful%20Practice/stf_curd.dart';
 import 'package:flutter_class_1/home_screen.dart';
 import 'package:flutter_class_1/practice.dart';
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MediaQueryWidget(),
+      home: StackPractice(),
     );
   }
 }
