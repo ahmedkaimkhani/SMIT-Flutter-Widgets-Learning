@@ -26,17 +26,43 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: StackPractice(),
+      home: Gridview4(),
     );
   }
 }
 
-
-
-// For Navigator Push Named 
+// For Navigator Push Named
 // initialRoute: "/",
 //       routes: {
 //         '/': (context) => const PushNamedNavigator(),
 //         '/firstscreen': (context) => const PushNamedNavigator2(),
 //         '/secondscreen': (context) => const ThirdScreen()
 //       },
+
+class Gridview4 extends StatelessWidget {
+  const Gridview4({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: GridView(
+        gridDelegate:
+            SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+        children: [
+          Container(
+            color: Colors.red,
+          ),
+          Container(
+            color: Colors.yellow,
+          ),
+          Container(
+            color: Colors.green,
+          ),
+          Container(
+            color: Colors.black,
+          ),
+        ],
+      ),
+    );
+  }
+}
