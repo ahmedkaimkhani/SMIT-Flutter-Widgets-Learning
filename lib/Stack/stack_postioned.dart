@@ -11,14 +11,18 @@ class StackPractice extends StatelessWidget {
       ),
       body: Center(
         child: Container(
+          color: Colors.grey,
           height: 60,
           width: 60,
           child: Stack(
             children: [
-              Container(
-                width: 50,
-                height: 50,
-                color: Colors.red,
+              Positioned(
+                bottom: 0,
+                child: Container(
+                  width: 50,
+                  height: 50,
+                  color: Colors.red,
+                ),
               ),
               const Positioned(
                 right: 0,
