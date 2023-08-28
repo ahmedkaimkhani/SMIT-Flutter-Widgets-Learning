@@ -9,26 +9,26 @@ class StackPractice extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Stack Practie'),
       ),
-      body: Container(
-        height: 60,
-        width: 60,
-        color: Colors.grey,
-        child: Stack(
-          children: [
-            Container(
-              width: 50,
-              height: 50,
-              color: Colors.red,
-            ),
-            const Positioned(
-              bottom: 0,
-              right: 0,
-              child: CircleAvatar(
-                radius: 10,
-                backgroundColor: Colors.green,
+      body: Center(
+        child: Container(
+          height: 60,
+          width: 60,
+          child: Stack(
+            children: [
+              Container(
+                width: 50,
+                height: 50,
+                color: Colors.red,
               ),
-            ),
-          ],
+              const Positioned(
+                right: 0,
+                child: CircleAvatar(
+                  radius: 10,
+                  backgroundColor: Colors.green,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
