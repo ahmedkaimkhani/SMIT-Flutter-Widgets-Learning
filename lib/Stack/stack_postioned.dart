@@ -11,7 +11,7 @@ class StackPractice extends StatelessWidget {
       ),
       body: Center(
         child: Container(
-          color: Colors.grey,
+          // color: Colors.grey,
           height: 60,
           width: 60,
           child: Stack(
