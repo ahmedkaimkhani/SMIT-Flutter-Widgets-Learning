@@ -10,12 +10,13 @@ class StackPractice extends StatelessWidget {
         title: const Text('Stack Practie'),
       ),
       body: Stack(
-        children: const [
-          CircleAvatar(
-            radius: 30,
-            backgroundColor: Colors.red,
+        children: [
+          Container(
+            width: 40,
+            height: 40,
+            color: Colors.red,
           ),
-          Positioned(
+          const Positioned(
             bottom: 0,
             right: 0,
             child: CircleAvatar(
