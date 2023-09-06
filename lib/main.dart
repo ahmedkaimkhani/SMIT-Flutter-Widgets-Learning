@@ -15,6 +15,8 @@ import 'package:flutter_class_1/Stateful%20Practice/stf_curd.dart';
 import 'package:flutter_class_1/home_screen.dart';
 import 'package:flutter_class_1/practice.dart';
 
+import 'Async Function/async_2.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -27,7 +29,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: AsyncFunction(),
+      home: AsyncPractice(),
     );
   }
 }
