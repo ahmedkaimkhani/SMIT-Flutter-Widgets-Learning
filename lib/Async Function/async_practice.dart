@@ -12,10 +12,11 @@ class _AsyncFunctionState extends State<AsyncFunction> {
   int counter2 = 0;
   int counter3 = 0;
 
-  updateValue() {
+  updateValue() async {
     counter++;
     counter2++;
     setState(() {});
+    await Future.delayed(const Duration(microseconds: 100));
     counter3++;
 
     // print statement is for checking counter is working perfectly or not.
