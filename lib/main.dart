@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_class_1/Async%20Function/async_practice.dart';
 import 'package:flutter_class_1/Counter/counter_2.dart';
 import 'package:flutter_class_1/Counter/counter_increment.dart';
 import 'package:flutter_class_1/Gridview/gridview.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: StackPractice(),
+      home: AsyncFunction(),
     );
   }
 }
