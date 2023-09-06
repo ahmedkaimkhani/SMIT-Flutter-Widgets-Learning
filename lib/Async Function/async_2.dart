@@ -15,7 +15,7 @@ class _AsyncPracticeState extends State<AsyncPractice> {
   loginLogout() async {
     isLogin = !isLogin;
     if (isLogin) {
-      await Future.delayed(Duration(seconds: 2));
+      await Future.delayed(const Duration(seconds: 2));
     }
     setState(() {});
     // print statement is for checking counter is working perfectly or not.
