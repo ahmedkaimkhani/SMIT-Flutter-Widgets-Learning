@@ -10,6 +10,15 @@ class AsyncPractice extends StatefulWidget {
 }
 
 class _AsyncPracticeState extends State<AsyncPractice> {
+  bool isLogin = false;
+
+  loginLogout() {
+    isLogin = !isLogin;
+    setState(() {});
+    // print statement is for checking counter is working perfectly or not.
+    print('done');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,14 +26,19 @@ class _AsyncPracticeState extends State<AsyncPractice> {
         title: const Text('Async'),
         centerTitle: true,
       ),
-      body: Column(
-        children: [
-          Text('login your id'),
-          ElevatedButton(
-            onPressed: () {},
-            child: const Text('log in'),
-          ),
-        ],
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            Text(!isLogin ? 'login your id' : 'Log out id'),
+            ElevatedButton(
+              onPressed: () {
+                loginLogout();
+              },
+              child: Text(!isLogin ? 'log in' : 'log out'),
+            ),
+          ],
+        ),
       ),
     );
   }
