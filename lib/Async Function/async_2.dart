@@ -12,8 +12,11 @@ class AsyncPractice extends StatefulWidget {
 class _AsyncPracticeState extends State<AsyncPractice> {
   bool isLogin = false;
 
-  loginLogout() {
+  loginLogout() async {
     isLogin = !isLogin;
+    if (isLogin) {
+      await Future.delayed(Duration(seconds: 2));
+    }
     setState(() {});
     // print statement is for checking counter is working perfectly or not.
     print('done');
